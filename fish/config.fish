@@ -25,8 +25,9 @@ function setFirstAvailablePath --description 'Set a variable to the first availa
   set -l key $argv[1]
   for i in $argv[2..-1]
     set -l dir "$i"
-    if not test -z "$key"
+    if test -e "$dir"
       set $key $dir
+      break
     end
   end
 end
@@ -35,8 +36,8 @@ end
 # Environment variables / Path
 
 # PWD bin
-addPath ./bin
-addPath ./node_modules/.bin
+set PATH $PATH ./bin
+set PATH $PATH ./node_modules/.bin
 
 # Dotfiles bin
 addPath (dirname (status -f))"/../bin"
