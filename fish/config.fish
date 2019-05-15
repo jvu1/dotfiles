@@ -26,7 +26,7 @@ function setFirstAvailablePath --description 'Set a variable to the first availa
   for i in $argv[2..-1]
     set -l dir "$i"
     if test -e "$dir"
-      set $key $dir
+      set -g -x "$key" "$dir"
       break
     end
   end
@@ -50,6 +50,7 @@ addPath /usr/local/bin
 # Android
 setFirstAvailablePath ANDROID_HOME $HOME/Library/Android/sdk /usr/local/share/android-sdk
 addPath "$ANDROID_HOME/tools/bin"
+addPath "$ANDROID_HOME/tools"
 addPath "$ANDROID_HOME/platform-tools"
 
 addPath /usr/local/share/android-ndk ANDROID_NDK_HOME
