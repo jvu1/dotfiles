@@ -17,8 +17,10 @@ function fish_prompt
   echo -n (prompt_pwd)
   set_color normal
 
-  set -l project_version (version)
-  echo -n '@'$project_version
+  if type -q version
+    set -l project_version (version)
+    echo -n '@'$project_version
+  end
 
   __terlar_git_prompt
 
