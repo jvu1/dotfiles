@@ -36,8 +36,8 @@ end
 # Environment variables / Path
 
 # PWD bin
-set PATH $PATH ./bin
-set PATH $PATH ./node_modules/.bin
+set PATH ./bin $PATH
+set PATH ./node_modules/.bin $PATH
 
 # Dotfiles bin
 addPath (dirname (status -f))"/../bin"
