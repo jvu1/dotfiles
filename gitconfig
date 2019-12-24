@@ -29,3 +29,5 @@
   filelog = log -u
   grep = grep -Ii
   diff = diff --word-diff
+  ls = log --pretty=format:\"%C(yellow)%h %C(green)%s %Creset(%ad)\" --date=relative
+  ll = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [a:%an,c:%cn]" --decorate --numstat --no-merges
