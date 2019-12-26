@@ -35,9 +35,6 @@ end
 ################################################################################
 # Environment variables / Path
 
-# Fulcrum bin
-set PATH ~/local/src/fulcrum/vm/bin $PATH
-
 # PWD bin
 set PATH ./bin $PATH
 set PATH ./node_modules/.bin $PATH
@@ -90,15 +87,13 @@ abbr gb 'git branch'
 abbr gd 'git diff'
 abbr gs 'git status'
 abbr gst 'git stash'
+abbr gr 'git rebase'
 abbr ga 'git add'
 abbr gl 'git log'
 abbr gco 'git checkout'
 abbr gc 'git commit'
 abbr gps 'git push'
 abbr gcp 'git cherry-pick'
-abbr gbd 'git checkout master && git branch --merged master | grep -v "master" | xargs -n 1 git branch -d'
-abbr grs 'git restore --staged'
-abbr gr  'git restore'
 
 # ls
 abbr l ls
