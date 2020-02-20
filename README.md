@@ -7,7 +7,7 @@ OSX install
 --------
 
     # Install dependencies
-    brew install vim fish git the_silver_searcher tmux
+    brew install vim fish git the_silver_searcher tmux github/gh/gh
 
     # Setup fish
     sudo 'echo /usr/local/bin/fish >> /etc/shells'

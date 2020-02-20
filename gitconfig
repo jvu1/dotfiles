@@ -18,7 +18,7 @@
   master = "!git checkout master"
   branch-name = "!git rev-parse --abbrev-ref HEAD"
   publish = "!git push -u origin HEAD"
-  pull-request = "!git publish && hub pull-request $@"
+  pull-request = "!git publish && gh pr create $@"
   unpublish = "!git push origin :$(git branch-name)"
   code-review = difftool origin/master...
   rebase-branch = "!git rebase -i `git merge-base master HEAD`"
