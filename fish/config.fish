@@ -43,9 +43,12 @@ set PATH ./node_modules/.bin $PATH
 addPath (dirname (status -f))"/../bin"
 addPath $HOME/local/bin
 
-# Homebrew bin
+# Homebrew bin (Intel)
 addPath /usr/local/sbin
 addPath /usr/local/bin
+# Homebrew bin (Apple M1 Silicon)
+addPath /opt/homebrew/bin
+addPath /opt/homebrew/sbin
 
 # Android
 setFirstAvailablePath ANDROID_HOME $HOME/Library/Android/sdk /usr/local/share/android-sdk

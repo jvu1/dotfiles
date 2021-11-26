@@ -9,9 +9,13 @@ OSX install
     # Install dependencies
     brew install vim fish git the_silver_searcher tmux github/gh/gh
 
-    # Setup fish
+    # Setup fish (Intel)
     sudo 'echo /usr/local/bin/fish >> /etc/shells'
     chsh -s /usr/local/bin/fish
+
+    # Setup fish (Apple Silicon)
+    sudo 'echo /opt/homebrew/bin/fish  >> /etc/shells'
+    chsh -s /opt/homebrew/bin/fish
     
     # Install the dotfiles
     mkdir -p ~/local/src
