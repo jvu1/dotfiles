@@ -81,7 +81,6 @@ end
 
 # Git
 abbr g "git"
-abbr g 'git'
 abbr gpr 'git pull-request'
 abbr gcm 'git checkout master'
 abbr gp 'git pull'
@@ -93,6 +92,8 @@ abbr gst 'git stash'
 abbr gr 'git rebase'
 abbr ga 'git add'
 abbr gl 'git log'
+abbr gt 'git restore'
+abbr grs 'git restore --staged'
 abbr gco 'git checkout'
 abbr gc 'git commit'
 abbr gps 'git push'
