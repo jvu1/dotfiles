@@ -7,7 +7,11 @@ OSX install
 --------
 
     # Install dependencies
-    brew install vim fish git the_silver_searcher tmux github/gh/gh
+    brew install vim fish git the_silver_searcher tmux gh starship
+
+    brew tap homebrew/cask-fonts
+    brew install --cask font-hack-nerd-font
+    brew install --cask font-fira-code-nerd-font
 
     # Setup fish (Intel)
     sudo 'echo /usr/local/bin/fish >> /etc/shells'
