@@ -82,7 +82,7 @@ end
 # Git
 abbr g "git"
 abbr gpr 'git pull-request'
-abbr gcm 'git checkout master'
+abbr gcm 'git checkout (git_main_branch)'
 abbr gp 'git pull'
 abbr gcb 'git checkout -b'
 abbr gb 'git branch'
