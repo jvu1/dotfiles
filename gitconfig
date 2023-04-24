@@ -27,15 +27,16 @@
   diffFilter = delta --color-only
 [alias]
   # workflow
+  default-branch = "!git rev-parse --abbrev-ref origin/HEAD | cut -c8- | xargs -n 1"
   co = checkout
-  master = "!git checkout master"
+  master = "!git checkout $(git default-branch)"
   branch-name = "!git rev-parse --abbrev-ref HEAD"
   publish = "!git push -u origin HEAD"
   pull-request = "!git publish && gh pr create $@"
   unpublish = "!git push origin :$(git branch-name)"
   code-review = difftool origin/master...
-  rebase-branch = "!git rebase -i `git merge-base master HEAD`"
-  delete-merged-branches = "!git co master && git branch --merged | grep -v '\\*' | xargs -n 1 git branch -d"
+  rebase-branch = "!git rebase -i `git merge-base $(git default-branch) HEAD`"
+  delete-merged-branches = "!git co $(git default-branch) && git branch --merged | grep -v '\\*' | xargs -n 1 git branch -d && git remote prune origin"
   ours = "!f() { git co --ours $@ && git add $@; }; f"
   theirs = "!f() { git co --theirs $@ && git add $@; }; f"
   # Helpers and tuners
