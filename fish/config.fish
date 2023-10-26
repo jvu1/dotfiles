@@ -99,10 +99,11 @@ abbr gco 'git checkout'
 abbr gc 'git commit'
 abbr gps 'git push'
 abbr gcp 'git cherry-pick'
+abbr grv 'gh repo view'
+abbr gbs 'git branch --color=always --sort=authordate --format="%(color:blue)%(authordate:relative);%(color:red)%(authorname);%(color:white)%(color:bold)%(refname:short)" | column -s ";" -t'
 
 # ls
-abbr l ls
-abbr ll ls -la
+abbr ll exa -l -a -h --accessed --modified --time-style=long-iso
 
 # Android
 abbr droid 'adb shell input text'
