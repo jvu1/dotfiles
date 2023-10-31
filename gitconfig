@@ -43,5 +43,6 @@
   filelog = log -u
   grep = grep -Ii
   diff = diff --word-diff
-  ls = log --pretty='%Cred%h%Creset | %C(yellow)%d%Creset %s %Cgreen(%ad)%Creset %C(cyan)[%an]%Creset' --date=human
+  ls = log --pretty='%Cred%h%Creset | %C(yellow)%d%Creset %s %Cgreen(%ad)%Creset %C(cyan)[%an]%Creset' --date=human --no-merges
+  lsm = log --pretty='%Cred%h%Creset | %C(yellow)%d%Creset %s %Cgreen(%ad)%Creset %C(cyan)[%an]%Creset' --date=human
   ll = log --pretty=format:"%C(red)%h%C(yellow)%d\\ %Creset%s%Cblue\\ %Cgreen(%ad)%C(cyan)\\ [a:%an,c:%cn]" --decorate --numstat --no-merges --date=human
