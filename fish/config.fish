@@ -115,6 +115,9 @@ abbr work 'cd ~/local/src/'
 abbr port 'lsof -i tcp:'
 abbr ip 'ifconfig | grep "inet " | grep -v 127.0.0.1'
 
+# Java
+abbr jvms /usr/libexec/java_home -V
+
 ################################################################################
 # Customization support
 
