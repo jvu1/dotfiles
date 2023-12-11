@@ -37,6 +37,7 @@
   code-review = difftool origin/master...
   rebase-branch = "!git rebase -i `git merge-base $(git default-branch) HEAD`"
   delete-merged-branches = "!git co $(git default-branch) && git branch --merged | grep -v '\\*' | xargs -n 1 git branch -d && git remote prune origin"
+  delete-merged-branches-this = "!git branch --merged | grep -v '\\*' | xargs -n 1 git branch -d && git remote prune origin"
   ours = "!f() { git co --ours $@ && git add $@; }; f"
   theirs = "!f() { git co --theirs $@ && git add $@; }; f"
   # Helpers and tuners
