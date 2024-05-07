@@ -76,6 +76,8 @@ if type vim 1>/dev/null
   set -x EDITOR 'vim'
 end
 
+fzf --fish | source
+
 ################################################################################
 # Abbreviations
 
@@ -103,7 +105,7 @@ abbr grv 'gh repo view'
 abbr gbs 'git branch --color=always --sort=authordate --format="%(color:blue)%(authordate:relative);%(color:red)%(authorname);%(color:white)%(color:bold)%(refname:short)" | column -s ";" -t'
 
 # ls
-abbr ll exa -l -a -h --accessed --modified --time-style=long-iso
+abbr ll eza -l -a -h --accessed --modified --time-style=long-iso --sort=name --group-directories-first
 
 # Android
 abbr droid 'adb shell input text'
