@@ -40,6 +40,7 @@
   delete-merged-branches-this = "!git branch --merged | grep -v '\\*' | xargs -n 1 git branch -d && git remote prune origin"
   ours = "!f() { git co --ours $@ && git add $@; }; f"
   theirs = "!f() { git co --theirs $@ && git add $@; }; f"
+  cleanup = "!git remote prune origin && git repack && git prune-packed && git gc --aggressive"
   # Helpers and tuners
   filelog = log -u
   grep = grep -Ii
