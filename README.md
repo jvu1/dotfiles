@@ -7,7 +7,7 @@ OSX install
 --------
 
     # Install dependencies
-    brew install vim fish git the_silver_searcher tmux gh starship
+    brew install vim fish git tmux gh starship fzf eza btop
 
     brew tap homebrew/cask-fonts
     brew install --cask font-hack-nerd-font
@@ -18,12 +18,13 @@ OSX install
     chsh -s /usr/local/bin/fish
 
     # Setup fish (Apple Silicon)
-    sudo 'echo /opt/homebrew/bin/fish  >> /etc/shells'
+    sudo nano /etc/shells
+    # Add `/opt/homebrew/bin/fish` at the end of the file
     chsh -s /opt/homebrew/bin/fish
     
     # Install the dotfiles
     mkdir -p ~/local/src
     cd ~/local/src
-    git clone git@github.com/Nthalk/dotfiles
+    git clone git@github.com:jvu1/dotfiles.git
     ./install.sh
 
