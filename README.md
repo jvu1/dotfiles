@@ -7,9 +7,9 @@ OSX install
 --------
 
     # Install dependencies
-    brew install vim fish git tmux gh starship fzf eza btop
+    brew install vim fish git tmux gh starship fzf eza btop git-delta
 
-    brew tap homebrew/cask-fonts
+    brew install --cask 1password arc chatgpt ghostty iterm2 numi obsidian raycast sublime-text stats the-unarchiver topnotch
     brew install --cask font-hack-nerd-font
     brew install --cask font-fira-code-nerd-font
 
