@@ -42,7 +42,7 @@ style = "green bold"
 
 [package]
 disabled = false
-format = "@[$version]($style)"
+format = "|[$version]($style)"
 
 [git_state]
 format = '[\($state( $progress_current of $progress_total)\)]($style) '
