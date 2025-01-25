@@ -47,8 +47,7 @@ addPath $HOME/local/bin
 addPath /usr/local/sbin
 addPath /usr/local/bin
 # Homebrew bin (Apple M1 Silicon)
-addPath /opt/homebrew/bin
-addPath /opt/homebrew/sbin
+set -gx PATH /opt/homebrew/bin /opt/homebrew/sbin $PATH
 
 # Android
 setFirstAvailablePath ANDROID_HOME $HOME/Library/Android/sdk /usr/local/share/android-sdk
@@ -107,9 +106,6 @@ abbr gbs 'git branch --color=always --sort=authordate --format="%(color:blue)%(a
 # ls
 abbr ll eza -l -a -h --accessed --modified --time-style=long-iso --sort=name --group-directories-first
 
-# Android
-abbr droid 'adb shell input text'
-
 # Misc. Productivity
 abbr work 'cd ~/local/src/'
 
@@ -119,6 +115,12 @@ abbr ip 'ifconfig | grep "inet " | grep -v 127.0.0.1'
 
 # Java
 abbr jvms /usr/libexec/java_home -V
+
+# homebrew
+abbr bgc 'brew update; brew upgrade; brew cleanup; brew doctor'
+
+# tmux
+abbr tmux 'tmux attach -t default || tmux new -s default'
 
 ################################################################################
 # Customization support

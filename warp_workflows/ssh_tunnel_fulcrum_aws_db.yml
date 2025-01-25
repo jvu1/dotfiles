@@ -1,6 +1,6 @@
 ---
 name: SSH Tunnel into a Fulcrum AWS Postgres database
-command: "ssh -L 1111:{{host}}:5432 ubuntu@{{jump_host_ip}} -i ~/local/src/fulcrum/aws-keys/Fulcrum-CD.pem"
+command: "ssh -L 1111:{{host}}:5432 ubuntu@{{jump_host_ip}} -i ~/local/src/sitehound-inc/aws-keys/Fulcrum-CD.pem"
 tags:
   - [ postgresql, work, ssh ]
 description: "Establish an SSH tunnel into a Fulcrum AWS Postgres database, so that you can run psql commands against it."
