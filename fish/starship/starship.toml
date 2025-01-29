@@ -1,4 +1,5 @@
 # Inserts a blank line between shell prompts
+command_timeout = 5000
 add_newline = false
 
 format = """
@@ -51,10 +52,10 @@ cherry_pick = "[🍒](bold red)"
 [git_status]
 format = ' [\[$conflicted$stashed$deleted$renamed$modified$staged$untracked\]\[$ahead_behind\]]($style)'
 conflicted = "😵"
-ahead = '[⇡\($count\)](green)'
-diverged = "⇕⇡${ahead_count}⇣${behind_count}"
-behind = '[⇣\($count\)](red)'
-up_to_date = "[✓](green)"
+ahead = '[⬆️\($count\)](green)'
+diverged = "⬆️${ahead_count}|⬇️${behind_count}"
+behind = '[⬇️\($count\)](red)'
+up_to_date = "[✅](green)"
 untracked = "🤷"
 stashed = "📦"
 modified = '[++\($count\)](red)'
