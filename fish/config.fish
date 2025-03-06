@@ -106,6 +106,9 @@ abbr gbs 'git branch --color=always --sort=authordate --format="%(color:blue)%(a
 # ls
 abbr ll eza -l -a -h --accessed --modified --time-style=long-iso --sort=name --group-directories-first
 
+# Abbreviations
+abbr cd "z"
+
 # Misc. Productivity
 abbr work 'cd ~/local/src/'
 
@@ -128,3 +131,16 @@ abbr tmux 'tmux attach -t default || tmux new -s default'
 if test -f "$HOME/.config/fish/custom.fish"
   source "$HOME/.config/fish/custom.fish"
 end
+
+################################################################################
+# brew init
+
+# starship
+starship init fish | source
+set -x STARSHIP_CONFIG $HOME/local/src/dotfiles/fish/starship/starship.toml
+
+# zoxide
+zoxide init fish | source
+
+# mcfly
+mcfly init fish | source

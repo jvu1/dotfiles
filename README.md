@@ -7,9 +7,9 @@ OSX install
 --------
 
     # Install dependencies
-    brew install vim fish git tmux gh starship fzf eza btop git-delta magic-wormhole
+    brew install bat btop eza fish fzf gh git git-delta magic-wormhole mcfly starship tmux vim zoxide
 
-    brew install --cask 1password arc chatgpt ghostty iterm2 numi obsidian raycast sublime-text stats the-unarchiver topnotch
+    brew install --cask 1password appcleaner arc chatgpt coscreen claude ghostty iterm2 logi-options+ ngrok numi obsidian postman raycast sublime-text stats sublime-text the-unarchiver topnotch visualvm
     brew install --cask font-hack-nerd-font
     brew install --cask font-fira-code-nerd-font
 
@@ -27,4 +27,3 @@ OSX install
     cd ~/local/src
     git clone git@github.com:jvu1/dotfiles.git
     ./install.sh
-

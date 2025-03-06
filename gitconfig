@@ -1,10 +1,21 @@
 [color]
   ui = auto
+[tag]
+  sort = version:refname
+[init]
+  defaultBranch = main
+[diff]
+  algorithm = histogram
+  colorMoved = plain
+  mnemonicPrefix = true
+  renames = true
 [rerere]
-  enabled = 1
-  autoupdate = 1
+  enabled = true
+  autoupdate = true
 [push]
   default = simple
+  autoSetupRemote = true
+  followTags = true
 [pull]
   rebase = true
 [core]
@@ -12,7 +23,24 @@
   ignorecase = false
   whitespace = fix,-indent-with-non-tab,trailing-space,cr-at-eol
   excludesfile = ~/.gitignore
+  fsmonitor = true
   pager = delta
+  untrackedCache = true
+  untrackedCache = true
+[fetch]
+  prune = true
+  pruneTags = true
+  all = true
+[help]
+  autocorrect = prompt
+[commit]
+  verbose = true
+[rebase]
+  autoSquash = true
+  autoStash = true
+  updateRefs = true
+[merge]
+  conflictStyle = zdiff3
 [delta]
   plus-style = "syntax #012800"
   minus-style = "syntax #340001"
