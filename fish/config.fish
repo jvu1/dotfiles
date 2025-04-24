@@ -87,7 +87,8 @@ abbr gcm 'git checkout (git_main_branch)'
 abbr grm 'git rebase (git_main_branch)'
 abbr gp 'git pull'
 abbr gcb 'git checkout -b'
-abbr gb 'git branch'
+abbr gb 'git branch --color=always --format="%(color:red)%(authorname);%(color:blue)%(authordate:relative);%(color:white)%(color:bold)%(refname:short)" | column -s ";" -t'
+abbr gbd 'git branch -D'
 abbr gd 'git diff'
 abbr gs 'git status'
 abbr gst 'git stash'
@@ -101,7 +102,7 @@ abbr gc 'git commit'
 abbr gps 'git push'
 abbr gcp 'git cherry-pick'
 abbr grv 'gh repo view'
-abbr gbs 'git branch --color=always --sort=authordate --format="%(color:blue)%(authordate:relative);%(color:red)%(authorname);%(color:white)%(color:bold)%(refname:short)" | column -s ";" -t'
+abbr gdm 'git delete-merged-branches-this'
 
 # ls
 abbr ll eza -l -a -h --accessed --modified --time-style=long-iso --sort=name --group-directories-first

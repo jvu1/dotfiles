@@ -7,7 +7,7 @@ OSX install
 --------
 
     # Install dependencies
-    brew install bat btop eza fish fzf gh git git-delta magic-wormhole mcfly starship tmux vim zoxide
+    brew install bat btop eza fish fzf gh git git-delta magic-wormhole mcfly ripgrep starship tmux vim zoxide
 
     brew install --cask 1password appcleaner arc chatgpt coscreen claude ghostty iterm2 logi-options+ ngrok numi obsidian postman raycast sublime-text stats sublime-text the-unarchiver topnotch visualvm
     brew install --cask font-hack-nerd-font
