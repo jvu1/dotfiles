@@ -30,7 +30,7 @@ load $HOME/.vimrc $DOTDIR/vimrc
 load $HOME/.emacs $DOTDIR/emacs
 load $HOME/.vim $DOTDIR/vim
 load $HOME/.config/fish $DOTDIR/fish
-
+load $HOME/local/src/dotfiles/tabby/config.yaml $HOME/Library/Application\ Support/tabby/config.yaml
 
 # Include ~/.bashrc in ~/.bash_profile
 bashrc_include='[[ -s ~/.bashrc ]] && source ~/.bashrc'
