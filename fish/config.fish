@@ -111,7 +111,7 @@ abbr ll eza -l -a -h --accessed --modified --time-style=long-iso --sort=name --g
 abbr cd "z"
 
 # Misc. Productivity
-abbr work 'cd ~/local/src/'
+abbr work 'z ~/local/src/'
 
 # Network
 abbr port 'lsof -i tcp:'
@@ -145,3 +145,10 @@ zoxide init fish | source
 
 # mcfly
 mcfly init fish | source
+
+if status is-interactive
+    and if not set -q TMUX
+    and test "$TERM_PROGRAM" != "WarpTerminal"
+        tmux attach -t default; or tmux new -s default
+    end
+end
