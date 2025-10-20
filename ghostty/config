@@ -1,0 +1,7 @@
+font-size=16
+minimum-contrast=1.1
+theme = iTerm2 Dark Background
+shell-integration = fish
+auto-update = download
+confirm-close-surface = false
+command = ~/local/src/dotfiles/ghostty/startup.sh
