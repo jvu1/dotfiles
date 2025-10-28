@@ -25,12 +25,25 @@ mkdir -p $HOME/local/inst
 mkdir -p $HOME/local/tmp
 mkdir -p $HOME/.config
 
+if ! hash brew >> /dev/null; then
+    echo 'Installing homebrew...'
+    /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+fi
+
+echo 'Installing brew packages and GUI apps'
+brew install asdf bat btop cloudflared eza fd fish fzf gh git git-delta glow magic-wormhole mcfly ripgrep starship tmux vim zoxide
+brew install --cask 1password appcleaner arc chatgpt ghostty hiddenbar logi-options+ numi obsidian postman raycast sublime-text stats tabby the-unarchiver topnotch visualvm
+
+# Add /opt/homebrew/bin/fish to /etc/shells (if not already present), then set it as default shell
+grep -qxF '/opt/homebrew/bin/fish' /etc/shells || echo '/opt/homebrew/bin/fish' | sudo tee -a /etc/shells > /dev/null
+chsh -s /opt/homebrew/bin/fish
+
 load $HOME/.tmux.conf $DOTDIR/tmux.conf
 load $HOME/.vimrc $DOTDIR/vimrc
-load $HOME/.emacs $DOTDIR/emacs
 load $HOME/.vim $DOTDIR/vim
 load $HOME/.config/fish $DOTDIR/fish
 load $HOME/local/src/dotfiles/tabby/config.yaml $HOME/Library/Application\ Support/tabby/config.yaml
+load $HOME/local/src/dotfiles/ghostty/config $HOME/Library/Application\ Support/com.mitchellh.ghostty/config
 
 # Include ~/.bashrc in ~/.bash_profile
 bashrc_include='[[ -s ~/.bashrc ]] && source ~/.bashrc'
