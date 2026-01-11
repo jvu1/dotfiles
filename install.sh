@@ -31,7 +31,7 @@ if ! hash brew >> /dev/null; then
 fi
 
 echo 'Installing brew packages and GUI apps'
-brew install asdf bat btop cloudflared eza fd fish fzf gh git git-delta glow magic-wormhole mcfly ripgrep starship tmux vim zoxide
+brew install asdf bat btop dust cloudflared eza fd fish fzf gh git git-delta glow magic-wormhole mcfly ripgrep starship tmux vim zoxide
 brew install --cask 1password appcleaner arc chatgpt ghostty hiddenbar logi-options+ numi obsidian postman raycast sublime-text stats tabby the-unarchiver topnotch visualvm
 
 # Add /opt/homebrew/bin/fish to /etc/shells (if not already present), then set it as default shell

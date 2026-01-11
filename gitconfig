@@ -56,6 +56,7 @@
   # workflow
   default-branch = "!git rev-parse --abbrev-ref origin/HEAD | cut -c8- | xargs -n 1"
   co = checkout
+  add-new-only = "!git ls-files --others --exclude-standard | xargs git add"
   master = "!git checkout $(git default-branch)"
   branch-name = "!git rev-parse --abbrev-ref HEAD"
   publish = "!git push -u origin HEAD"

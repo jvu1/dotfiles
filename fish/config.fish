@@ -109,6 +109,9 @@ abbr ll eza -l -a -h --accessed --modified --time-style=long-iso --sort=name --g
 
 # Abbreviations
 abbr cd "z"
+abbr cat "bat"
+abbr grep "rg"
+abbr find "fd"
 
 # Misc. Productivity
 abbr work 'z ~/local/src/'
@@ -145,6 +148,8 @@ zoxide init fish | source
 
 # mcfly
 mcfly init fish | source
+set -gx MCFLY_KEY_SCHEME vim
+set -gx MCFLY_FUZZY 2
 
 if status is-interactive
     and if not set -q TMUX
