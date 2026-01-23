@@ -32,6 +32,13 @@ function setFirstAvailablePath --description 'Set a variable to the first availa
   end
 end
 
+# history across fishes
+function save_history --on-event fish_preexec
+    history --save
+end
+alias hr 'history --merge'  # read and merge history from disk
+bind \e\[A 'history --merge ; up-or-search'
+
 ################################################################################
 # Environment variables / Path
 
@@ -105,7 +112,7 @@ abbr grv 'gh repo view'
 abbr gdm 'git delete-merged-branches-this'
 
 # ls
-abbr ll eza -l -a -h --accessed --modified --time-style=long-iso --sort=name --group-directories-first
+abbr ll eza -l -a -h --accessed --modified --time-style=long-iso --sort=name --group-directories-first --icons=always
 
 # Abbreviations
 abbr cd "z"
