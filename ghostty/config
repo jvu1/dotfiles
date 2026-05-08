@@ -1,7 +1,20 @@
-font-size=16
-minimum-contrast=1.1
+# Theme
 theme = iTerm2 Dark Background
+# minimum-contrast=1.1
+
+# Font
+font-family = "JetBrains Mono"
+font-size=16
+
+# Window settings
+window-padding-x = 10
+window-padding-y = 10
+window-save-state = always
+
+# Quick operations
+keybind = cmd+k=clear_screen
+
+# Miscellaneous
 shell-integration = fish
 auto-update = download
 confirm-close-surface = false
-
